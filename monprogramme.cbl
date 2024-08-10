@@ -1,28 +1,23 @@
-identification division.
-program-id. myprog.
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. myprog.
 
-environment division.
-configuration section.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
 
-data division.
-working-storage section.
-77 a PIC 9.
-77 b PIC 9.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       77 a PIC 9.
+       77 b PIC 9.
 
-screen section.
-1 pla-titre.
-      2 line col 8 value 'entrer la valeur de a : '.
-      2 PIC 9 nom required.
-      2 line col 10 value 'entrer la valeur de b : '.
-      2 PIC 9 nom required.
+       SCREEN SECTION.
+       01 pla-titre.
+           05 LINE 8 COL 8 VALUE 'Entrer la valeur de a : '.
+           05 PIC 9(1) TO a REQUIRED.
+           05 LINE 10 COL 8 VALUE 'Entrer la valeur de b : '.
+           05 PIC 9(1) TO b REQUIRED.
 
-procedure division.
-display pla-titre.
-accept pla-titre.
+       PROCEDURE DIVISION.
+           DISPLAY pla-titre.
+           ACCEPT pla-titre.
 
-stop run.
-
-    
-    goback.
-
-end program myprog.
+           STOP RUN.
